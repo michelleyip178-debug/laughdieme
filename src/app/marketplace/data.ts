@@ -122,6 +122,7 @@ export const NAV = [
   { id: "messages",     emoji: "💬", label: "Messages" },
   { id: "people",       emoji: "🤝", label: "People" },
   { id: "saved",        emoji: "🔖", label: "Saved" },
+  { id: "upload",       emoji: "📤", label: "Upload" },
   { id: "profile",      emoji: "🪪", label: "Profile" },
 ];
 
@@ -214,7 +215,7 @@ export const CONVERSATIONS: Conversation[] = [
 export const NOTIFICATIONS = [
   { id: "n1", emoji: "⭐", text: "You were shortlisted for Product Designer for the next LifeSG release", when: "1h",  unread: true },
   { id: "n2", emoji: "💬", text: "Priya Menon sent you a message",                                        when: "2h",  unread: true },
-  { id: "n3", emoji: "🚀", text: "3 new Project opportunities match your skills",                          when: "1d",  unread: true },
+  { id: "n3", emoji: "🚀", text: "3 new Project opportunities match your competencies",                     when: "1d",  unread: true },
   { id: "n4", emoji: "🤝", text: "Daniel Tan accepted your connection",                                    when: "3d",  unread: false },
   { id: "n5", emoji: "👀", text: "MSF is reviewing your application",                                      when: "5d",  unread: false },
 ];
