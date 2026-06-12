@@ -9,6 +9,7 @@ import { Messages } from "./screen-messages";
 import { People } from "./screen-people";
 import { Profile } from "./screen-profile";
 import { Onboarding } from "./screen-onboarding";
+import { UploadOpportunities } from "./screen-upload";
 import { PEOPLE, Opportunity, Person } from "./data";
 
 let toastTimer: ReturnType<typeof setTimeout>;
@@ -99,6 +100,8 @@ export function MarketplaceApp() {
     main = <Messages />;
   } else if (view === "people") {
     main = <People connectedIds={connectedIds} onConnect={connect} onMessage={goMessages} />;
+  } else if (view === "upload") {
+    main = <UploadOpportunities onNav={nav} />;
   } else {
     main = (
       <Feed
