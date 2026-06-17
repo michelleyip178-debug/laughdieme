@@ -1,4 +1,4 @@
-# laughdieme
+# CareerCompass
 
 A whole-of-government internal talent marketplace — your "internal LinkedIn." This repo is
 the marketing/landing site with a waitlist.

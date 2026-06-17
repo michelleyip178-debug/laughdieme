@@ -1,6 +1,6 @@
 # Using the Claude Code extension in VS Code
 
-A quick guide for working on **laughdieme** with Claude Code inside VS Code.
+A quick guide for working on **CareerCompass** with Claude Code inside VS Code.
 
 ## 1. Install
 - VS Code → **Extensions** (⇧⌘X) → search **"Claude Code"** (by Anthropic) → **Install**.
@@ -8,7 +8,7 @@ A quick guide for working on **laughdieme** with Claude Code inside VS Code.
 - Sign in when prompted (same Claude account).
 
 ## 2. Open the project (this matters)
-**File → Open Folder →** `~/Documents/laughdieme` — open the **project folder itself**, not its
+**File → Open Folder →** `~/Documents/CareerCompass` — open the **project folder itself**, not its
 parent. That way Claude Code auto-loads [`CLAUDE.md`](../CLAUDE.md) and already knows the stack,
 the nvm/PATH quirk, deploy steps, and brand conventions.
 

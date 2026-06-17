@@ -244,7 +244,7 @@ function StepConfirm({ count, ringfenced, onReset, onView }: {
       <span style={{ width: 76, height: 76, borderRadius: 9999, background: "#d1faf4", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 38 }}>✅</span>
       <div>
         <h2 style={{ margin: 0, fontSize: 28, fontWeight: 900, letterSpacing: "-0.025em", color: "#1a1330" }}>{count} opportunities published!</h2>
-        <p style={{ margin: "8px 0 0", fontSize: 15.5, color: "rgba(26,19,48,.6)" }}>They&apos;re now live in the laughdieme marketplace.</p>
+        <p style={{ margin: "8px 0 0", fontSize: 15.5, color: "rgba(26,19,48,.6)" }}>They&apos;re now live in the CareerCompass marketplace.</p>
       </div>
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center" }}>
         <StatChip emoji="🌐" label={`${count - ringfenced} open to all officers`} bg="#d1faf4" fg="#065f46" />
