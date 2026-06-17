@@ -15,10 +15,10 @@ export function Button({
     lg: { padding: "14px 28px", fontSize: 16 },
   };
   const variants = {
-    primary: { bg: "#6d28d9", hov: "#5b21b6", fg: "#fff", border: "none" },
-    coral:   { bg: "#ff5d73", hov: "#ec5067", fg: "#fff", border: "none" },
-    ghost:   { bg: "transparent", hov: "#f4f0ff", fg: "#6d28d9", border: "none" },
-    outline: { bg: "#fff", hov: "#f4f0ff", fg: "#5b21b6", border: "2px solid #e9e0ff" },
+    primary: { bg: "#1558b0", hov: "#1249a0", fg: "#fff", border: "none" },
+    coral:   { bg: "#e53e3e", hov: "#c53030", fg: "#fff", border: "none" },
+    ghost:   { bg: "transparent", hov: "#e8f0fe", fg: "#1558b0", border: "none" },
+    outline: { bg: "#fff", hov: "#e8f0fe", fg: "#1249a0", border: "2px solid #c7d9f8" },
   };
   const v = variants[variant];
   return (
@@ -44,7 +44,7 @@ export function Button({
 }
 
 // -------------------------------------------------------------- Avatar
-export function Avatar({ initials, size = 40, color = "#6d28d9", ring = false }: {
+export function Avatar({ initials, size = 40, color = "#1558b0", ring = false }: {
   initials: string; size?: number; color?: string; ring?: boolean;
 }) {
   return (
@@ -52,7 +52,7 @@ export function Avatar({ initials, size = 40, color = "#6d28d9", ring = false }:
       width: size, height: size, borderRadius: 9999, background: color, color: "#fff",
       display: "inline-flex", alignItems: "center", justifyContent: "center",
       fontWeight: 800, fontSize: size * 0.38, flex: "none", letterSpacing: "-0.01em",
-      boxShadow: ring ? "0 0 0 3px #fff, 0 0 0 5px #e9e0ff" : "none",
+      boxShadow: ring ? "0 0 0 3px #fff, 0 0 0 5px #c7d9f8" : "none",
     }}>
       {initials}
     </span>
@@ -61,7 +61,7 @@ export function Avatar({ initials, size = 40, color = "#6d28d9", ring = false }:
 
 // -------------------------------------------------------------- Agency mark
 export function AgencyMark({ agency, size = 40 }: { agency: string; size?: number }) {
-  const a = AGENCIES[agency] || { color: "#6d28d9", short: agency };
+  const a = AGENCIES[agency] || { color: "#1558b0", short: agency };
   return (
     <span style={{
       width: size, height: size, borderRadius: 12, background: a.color,
@@ -75,7 +75,7 @@ export function AgencyMark({ agency, size = 40 }: { agency: string; size?: numbe
 
 // -------------------------------------------------------------- Type badge
 export function TypeBadge({ type, withEmoji = true }: { type: string; withEmoji?: boolean }) {
-  const t = TYPE_STYLES[type] || { bg: "#e9e0ff", fg: "#5b21b6", emoji: "" };
+  const t = TYPE_STYLES[type] || { bg: "#c7d9f8", fg: "#1249a0", emoji: "" };
   return (
     <span style={{
       background: t.bg, color: t.fg, fontWeight: 700, fontSize: 12.5,
@@ -95,8 +95,8 @@ export function Tag({ children, active, onClick }: {
     <span
       onClick={onClick}
       style={{
-        background: active ? "#6d28d9" : "#fff", color: active ? "#fff" : "#1a1330",
-        border: `2px solid ${active ? "#6d28d9" : "rgba(26,19,48,.08)"}`,
+        background: active ? "#1558b0" : "#fff", color: active ? "#fff" : "#111827",
+        border: `2px solid ${active ? "#1558b0" : "rgba(17,24,39,.08)"}`,
         fontWeight: 600, fontSize: 13, padding: "5px 13px", borderRadius: 9999,
         cursor: onClick ? "pointer" : "default", userSelect: "none",
         transition: "all .15s", display: "inline-flex", alignItems: "center", whiteSpace: "nowrap",
@@ -118,11 +118,11 @@ export function Card({ children, hover, onClick, style }: {
       onMouseEnter={() => setH(true)}
       onMouseLeave={() => setH(false)}
       style={{
-        background: "#fff", border: "2px solid rgba(26,19,48,.05)", borderRadius: 24, padding: 24,
+        background: "#fff", border: "1px solid #e5e7eb", borderRadius: 16, padding: 24,
         boxShadow: hover && h
-          ? "0 10px 25px -5px rgba(26,19,48,.10), 0 8px 10px -6px rgba(26,19,48,.06)"
-          : "0 1px 2px rgba(26,19,48,.06)",
-        transform: hover && h ? "translateY(-4px)" : "none",
+          ? "0 8px 20px -4px rgba(17,24,39,.10), 0 4px 8px -4px rgba(17,24,39,.06)"
+          : "0 1px 3px rgba(17,24,39,.06)",
+        transform: hover && h ? "translateY(-3px)" : "none",
         transition: "all .18s cubic-bezier(.4,0,.2,1)", cursor: onClick ? "pointer" : "default",
         ...style,
       }}
@@ -146,7 +146,7 @@ export function Toggle({ on, onChange, label }: {
     >
       <span style={{
         width: 46, height: 27, borderRadius: 9999,
-        background: on ? "#2dd4bf" : "#dde1e2",
+        background: on ? "#1558b0" : "#dde1e2",
         position: "relative", transition: "background .18s", flex: "none",
       }}>
         <span style={{
@@ -155,7 +155,7 @@ export function Toggle({ on, onChange, label }: {
           background: "#fff", boxShadow: "0 1px 3px rgba(0,0,0,.2)", transition: "left .18s",
         }} />
       </span>
-      {label && <span style={{ fontSize: 14, fontWeight: 600, color: "#1a1330" }}>{label}</span>}
+      {label && <span style={{ fontSize: 14, fontWeight: 600, color: "#111827" }}>{label}</span>}
     </button>
   );
 }
@@ -173,8 +173,8 @@ export function SaveButton({ saved, onClick, size = 38 }: {
       title={saved ? "Saved" : "Save"}
       style={{
         width: size, height: size, borderRadius: 9999, flex: "none",
-        border: `2px solid ${saved ? "#6d28d9" : "rgba(26,19,48,.10)"}`,
-        background: saved ? "#f4f0ff" : h ? "#f4f0ff" : "#fff",
+        border: `2px solid ${saved ? "#1558b0" : "rgba(17,24,39,.10)"}`,
+        background: saved ? "#e8f0fe" : h ? "#e8f0fe" : "#fff",
         cursor: "pointer", fontSize: size * 0.44, lineHeight: 1,
         display: "inline-flex", alignItems: "center", justifyContent: "center",
         transition: "all .15s", padding: 0,
@@ -194,8 +194,8 @@ export function SearchBar({ placeholder = "Search gigs, skills, agencies…", va
     <div style={{
       display: "flex", alignItems: "center", gap: 9, width, maxWidth: "100%",
       background: "#fff", borderRadius: 9999, padding: "10px 18px",
-      border: `2px solid ${f ? "#7c3aed" : "rgba(26,19,48,.08)"}`,
-      boxShadow: f ? "0 0 0 4px rgba(124,58,237,.12)" : "none", transition: "all .15s",
+      border: `2px solid ${f ? "#1558b0" : "rgba(17,24,39,.08)"}`,
+      boxShadow: f ? "0 0 0 4px rgba(21,88,176,.12)" : "none", transition: "all .15s",
     }}>
       <span style={{ fontSize: 15 }}>🔎</span>
       <input
@@ -204,7 +204,7 @@ export function SearchBar({ placeholder = "Search gigs, skills, agencies…", va
         placeholder={placeholder}
         style={{
           border: 0, outline: 0, flex: 1, minWidth: 0, fontFamily: "inherit",
-          fontSize: 14.5, color: "#1a1330", background: "transparent",
+          fontSize: 14.5, color: "#111827", background: "transparent",
         }}
       />
     </div>
@@ -214,7 +214,7 @@ export function SearchBar({ placeholder = "Search gigs, skills, agencies…", va
 // -------------------------------------------------------------- Meta row item
 export function Meta({ emoji, children }: { emoji: string; children: ReactNode }) {
   return (
-    <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13.5, color: "rgba(26,19,48,.62)", fontWeight: 500 }}>
+    <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13.5, color: "rgba(17,24,39,.62)", fontWeight: 500 }}>
       <span style={{ fontSize: 13 }}>{emoji}</span>{children}
     </span>
   );
@@ -229,7 +229,7 @@ export function Modal({ open, onClose, children, maxWidth = 520 }: {
     <div
       onClick={onClose}
       style={{
-        position: "fixed", inset: 0, zIndex: 100, background: "rgba(26,19,48,.45)",
+        position: "fixed", inset: 0, zIndex: 100, background: "rgba(17,24,39,.45)",
         backdropFilter: "blur(3px)", display: "flex", alignItems: "center", justifyContent: "center",
         padding: 20, animation: "ldFade .16s ease",
       }}
@@ -238,7 +238,7 @@ export function Modal({ open, onClose, children, maxWidth = 520 }: {
         onClick={(e) => e.stopPropagation()}
         style={{
           width: "100%", maxWidth, maxHeight: "88vh", overflowY: "auto", background: "#fff",
-          borderRadius: 28, padding: 30, boxShadow: "0 32px 64px -16px rgba(26,19,48,.4)",
+          borderRadius: 20, padding: 30, boxShadow: "0 32px 64px -16px rgba(17,24,39,.4)",
           animation: "ldPop .2s cubic-bezier(.4,0,.2,1)",
         }}
       >
@@ -256,7 +256,7 @@ export function Tabs({ tabs, active, onChange }: {
 }) {
   return (
     <div style={{
-      display: "flex", gap: 4, background: "#f2f0f7", padding: 4,
+      display: "flex", gap: 4, background: "#f0f2f5", padding: 4,
       borderRadius: 9999, width: "fit-content", maxWidth: "100%", overflowX: "auto",
     }}>
       {tabs.map((t) => {
@@ -265,8 +265,8 @@ export function Tabs({ tabs, active, onChange }: {
           <button key={t.id} type="button" onClick={() => onChange(t.id)} style={{
             border: 0, cursor: "pointer", fontFamily: "inherit", fontSize: 14, fontWeight: 700,
             padding: "8px 16px", borderRadius: 9999, whiteSpace: "nowrap",
-            background: on ? "#fff" : "transparent", color: on ? "#5b21b6" : "rgba(26,19,48,.6)",
-            boxShadow: on ? "0 1px 3px rgba(26,19,48,.12)" : "none", transition: "all .15s",
+            background: on ? "#fff" : "transparent", color: on ? "#1249a0" : "rgba(17,24,39,.6)",
+            boxShadow: on ? "0 1px 3px rgba(17,24,39,.12)" : "none", transition: "all .15s",
           }}>
             {t.label}{typeof t.count === "number" ? ` ${t.count}` : ""}
           </button>
@@ -280,7 +280,7 @@ export function Tabs({ tabs, active, onChange }: {
 export function StatusPill({ status, map }: {
   status: string; map?: Record<string, { color: string; bg: string; emoji: string }>;
 }) {
-  const s = (map && map[status]) || { color: "#5b21b6", bg: "#f4f0ff", emoji: "•" };
+  const s = (map && map[status]) || { color: "#1249a0", bg: "#e8f0fe", emoji: "•" };
   return (
     <span style={{
       display: "inline-flex", alignItems: "center", gap: 6, background: s.bg, color: s.color,
@@ -298,8 +298,8 @@ export function EmptyState({ emoji = "🗂️", title, sub }: {
   return (
     <div style={{ textAlign: "center", padding: "48px 24px" }}>
       <div style={{ fontSize: 40 }}>{emoji}</div>
-      <p style={{ margin: "12px 0 0", fontSize: 16.5, fontWeight: 700, color: "#1a1330" }}>{title}</p>
-      {sub && <p style={{ margin: "6px 0 0", fontSize: 14.5, color: "rgba(26,19,48,.6)" }}>{sub}</p>}
+      <p style={{ margin: "12px 0 0", fontSize: 16.5, fontWeight: 700, color: "#111827" }}>{title}</p>
+      {sub && <p style={{ margin: "6px 0 0", fontSize: 14.5, color: "rgba(17,24,39,.6)" }}>{sub}</p>}
     </div>
   );
 }

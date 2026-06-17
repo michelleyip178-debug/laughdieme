@@ -10,10 +10,10 @@ export const AGENCIES: Record<string, { short: string; color: string }> = {
 };
 
 export const TYPE_STYLES: Record<string, { bg: string; fg: string; emoji: string }> = {
-  Gig:        { bg: "#ffd166", fg: "#5c3d00", emoji: "⚡" },
-  Secondment: { bg: "#2dd4bf", fg: "#06403a", emoji: "🔁" },
-  Project:    { bg: "#c2a8ff", fg: "#3a1475", emoji: "🚀" },
-  Mentorship: { bg: "#ff5d73", fg: "#fff",    emoji: "🤝" },
+  Gig:        { bg: "#e0f7f1", fg: "#027a5e", emoji: "⚡" },
+  Secondment: { bg: "#dbeafe", fg: "#1d4ed8", emoji: "🔁" },
+  Project:    { bg: "#fef3c7", fg: "#92400e", emoji: "🚀" },
+  Mentorship: { bg: "#dcfce7", fg: "#166534", emoji: "🤝" },
 };
 
 export interface Opportunity {

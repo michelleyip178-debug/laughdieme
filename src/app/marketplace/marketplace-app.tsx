@@ -121,9 +121,9 @@ export function MarketplaceApp() {
       <style>{`
         html, body { margin: 0; padding: 0; }
         html, body, #__next { min-height: 100%; }
-        html { background: #fffdf7; }
+        html { background: #f4f5f7; }
         body {
-          background: #fffdf7; color: #1a1330;
+          background: #f4f5f7; color: #111827;
           font-family: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
           -webkit-font-smoothing: antialiased;
         }
@@ -134,8 +134,8 @@ export function MarketplaceApp() {
 
         #ld-toast {
           position: fixed; left: 50%; bottom: 26px; transform: translate(-50%, 160%);
-          background: #1a1330; color: #fff; font-size: 13.5px; font-weight: 600;
-          padding: 12px 22px; border-radius: 9999px; box-shadow: 0 14px 30px -8px rgba(26,19,48,.4);
+          background: #111827; color: #fff; font-size: 13.5px; font-weight: 600;
+          padding: 12px 22px; border-radius: 9999px; box-shadow: 0 14px 30px -8px rgba(17,24,39,.4);
           transition: transform .32s cubic-bezier(.4,0,.2,1); z-index: 200; visibility: hidden; max-width: 90vw;
         }
         #ld-toast.ld-toast-show { transform: translate(-50%, 0); visibility: visible; }
@@ -143,14 +143,16 @@ export function MarketplaceApp() {
         .ld-navitem {
           display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 14px;
           border: 0; cursor: pointer; font-family: inherit; font-size: 15px; text-align: left;
-          font-weight: 600; background: transparent; color: rgba(26,19,48,.72); transition: all .15s; width: 100%;
+          font-weight: 600; background: transparent; color: rgba(17,24,39,.72); transition: all .15s; width: 100%;
         }
-        .ld-navitem:hover { background: #faf8ff; }
-        .ld-navitem.is-active { background: #f4f0ff; color: #5b21b6; font-weight: 700; }
+        .ld-navitem:hover { background: #f9fafb; }
+        .ld-navitem.is-active { background: #e8f0fe; color: #1558b0; font-weight: 700; }
+
+        .browse-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
         @media (max-width: 920px) {
           .ld-sidebar { position: fixed !important; bottom: 0; top: auto !important; left: 0; right: 0; width: 100% !important; height: auto !important;
-            flex-direction: row !important; border-right: 0 !important; border-top: 1px solid rgba(26,19,48,.1); z-index: 40;
+            flex-direction: row !important; border-right: 0 !important; border-top: 1px solid #e5e7eb; z-index: 40;
             padding: 6px !important; gap: 2px !important; justify-content: space-around; }
           .ld-sidebar > div:first-child, .ld-side-cta { display: none !important; }
           .ld-sidebar nav { flex-direction: row !important; justify-content: space-around; width: 100%; gap: 0 !important; }
@@ -158,6 +160,7 @@ export function MarketplaceApp() {
           .ld-navitem span:nth-child(2) { flex: none !important; }
           .ld-main { padding-bottom: 80px !important; }
           .detail-grid { grid-template-columns: 1fr !important; }
+          .browse-grid { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 620px) {
           .ld-demo-pill { display: none !important; }
