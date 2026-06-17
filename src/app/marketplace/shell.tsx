@@ -15,7 +15,7 @@ export function Sidebar({ view, onNav, onStartOnboarding, badges }: {
       position: "sticky", top: 0, height: "100vh",
     }}>
       <div style={{ padding: "4px 10px 22px" }}>
-        <span style={{ fontWeight: 900, letterSpacing: "-0.025em", textTransform: "lowercase", fontSize: 24, color: "#5b21b6" }}>laughdieme</span>
+        <span style={{ fontWeight: 900, letterSpacing: "-0.025em", fontSize: 24, color: "#5b21b6" }}>CareerCompass</span>
       </div>
       <nav style={{ display: "flex", flexDirection: "column", gap: 4, flex: 1 }}>
         {NAV.map((item) => {

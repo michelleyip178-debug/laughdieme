@@ -33,7 +33,7 @@ export default function Home() {
       {/* Nav */}
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
         <span className="text-2xl font-black tracking-tight text-brand-700">
-          laughdieme
+          CareerCompass
         </span>
         <a
           href="#waitlist"
@@ -53,7 +53,7 @@ export default function Home() {
           <span className="text-brand-600">already in government.</span>
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/70 sm:text-xl">
-          laughdieme is the whole-of-government talent marketplace. Find
+          CareerCompass is the whole-of-government talent marketplace. Find
           projects, gigs, and people across every agency — and let your skills
           be seen.
         </p>
@@ -108,7 +108,7 @@ export default function Home() {
             Ready to find your people?
           </h2>
           <p className="mt-4 max-w-xl text-lg text-white/80">
-            Join the waitlist and be first in when laughdieme opens.
+            Join the waitlist and be first in when CareerCompass opens.
           </p>
           <div className="mt-8 [&_button]:bg-accent [&_button]:hover:bg-accent/90 [&_input]:border-white/30">
             <SignupForm />
@@ -119,7 +119,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="mx-auto w-full max-w-6xl px-6 py-10 text-sm text-foreground/50">
         <div className="flex flex-col items-center justify-between gap-2 border-t border-foreground/10 pt-8 sm:flex-row">
-          <span className="font-black text-brand-700">laughdieme</span>
+          <span className="font-black text-brand-700">CareerCompass</span>
           <span>
             Built for the whole of government · © {new Date().getFullYear()}
           </span>
